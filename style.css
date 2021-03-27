@@ -1,47 +1,102 @@
 body {
-  background-color: lightblue;
+  /* background-color: #fff; */
   align-content: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: monospace;
   text-align: center;
+  margin:0;
+  padding:0;
+  height:100%;
+  color: #fff
 }
 
+html {
+height:100%;
+background:#e1bc91;
+}
+
+.header {
+padding-top: 50px;
+}
 .table {
-  font-size: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  table-layout: fixed;
-  width: 700px;
-  height: 700px;
+font-size: 100px;
+margin-left: auto;
+margin-right: auto;
+table-layout: fixed;
+width: 700px;
+height: 700px;
+padding: 50px;
+text-align: center;
 }
 
-.table .td {
-  max-width:30px;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    white-space: nowrap;
+.one {
+  text-align: left;
+  align-items: center;
 }
+/* .table .td {
+max-width:30px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
 
-.one, .two, .four, .five,  .seven, .eight {
-  border-right: solid;
-  color:
+} */
+
+/* .one, .two, .four, .five,  .seven, .eight {
+border-right: solid;
+color:
 }
 
 .four, .five, .six, .seven, .eight, .nine {
-  border-top: solid;
-  color:
-}
+border-top: solid;
+color:
+} */
 
 .one, .two, .three, .four, .five, .six, .seven, .eight, .nine {
-  padding: 50px
+padding: 50px
 }
 
 .resetBtn {
-  border: none;
-  background-color: black;
-  color: white;
-  padding: 7px;
+border: none;
+background-color: #c19277;
+color: white;
+padding: 7px;
+border: none;
+border-radius: 50px;
+height: 50px;
+width: 150px;
+font-size: 15px;
+}
+
+.resetBtn:hover {
+cursor: pointer;
 }
 
 .reset {
-  padding: 50px
+padding: 40px;
 }
+
+th {
+background-color: #62959c;
+border: 3px solid #e3d0b9;
+font-size:80px;
+color:#e1bc91;
+border-radius: 50px;
+}
+
+th:hover {
+cursor: pointer;
+opacity: 0.9;
+}
+
+th:after {
+content: "\00A0";
+}
+
+.flex {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+flex-basis: 10px;
+}
+
+button:focus {outline:0;}

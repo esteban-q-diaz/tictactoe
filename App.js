@@ -31,13 +31,14 @@ for (var i = 0; i < rows ; i++) {
 function stateChange (string, num1, num2) {
   // x = 1, O = 0
   var winner = "no winner yet";
-  var player1;
 
-  if (count % 2 === 0) {
-    this.currentState[num1][num2] = 1;
-  } else {
-    this.currentState[num1][num2] = 2;
-  }
+  //Update the STATE matrix
+    if (count % 2 === 0 ) {
+      this.currentState[num1][num2] = 1;
+    } else {
+      this.currentState[num1][num2] = 2;
+    }
+
 
 
   /* -------Check for horizontal winner -------*/
@@ -94,7 +95,7 @@ function stateChange (string, num1, num2) {
   }
 
   /* -------Check for draws -------*/
-  if(count === 9) {
+  if(winner === "no winner yet" && count === 9) {
     winner = 'draw'
   }
 
@@ -108,13 +109,16 @@ function stateChange (string, num1, num2) {
 //VIEW
 //VIEW
 
+
+
+//Update the DOM
 function updateDOM (string, winner) {
 
   // Get access to the incoming class String (access to the DOM)
   var currentState = document.getElementsByClassName(string)
   // Locate where the content of the incoming class is found
   var changeState = currentState[0].childNodes[0];
-  if (this.count % 2 === 0) {
+  if (this.count % 2 === 1) {
     changeState.data = 'X'
   } else {
     changeState.data = 'O'
@@ -195,8 +199,10 @@ const one = document.querySelector('.one')
 
 one.addEventListener('click', event=> {
   console.log('click worked')
-  this.stateChange('one', 0, 0)
-  this.count++
+  if (this.currentState[0][0] === 0) {
+    this.stateChange('one', 0, 0)
+    this.count++
+  }
 })
 
 // CLICK FOR BOX TWO
@@ -204,8 +210,11 @@ const two = document.querySelector('.two')
 
 two.addEventListener('click', event=> {
   console.log('click two worked')
-  this.stateChange('two', 0, 1)
-  this.count++
+  if (this.currentState[0][1] === 0) {
+    this.stateChange('two', 0, 1)
+    this.count++
+  }
+
 })
 
 // CLICK FOR BOX THREE
@@ -213,8 +222,10 @@ const three = document.querySelector('.three')
 
 three.addEventListener('click', event=> {
   console.log('click three worked');
-  this.stateChange('three', 0, 2);
-  this.count++
+  if (this.currentState[0][2] === 0) {
+    this.stateChange('three', 0, 2);
+    this.count++
+  }
 })
 
 // CLICK FOR BOX FOUR
@@ -222,8 +233,10 @@ const four = document.querySelector('.four')
 
 four.addEventListener('click', event=> {
   console.log('click four worked')
-  this.stateChange('four', 1, 0)
-  this.count++
+  if (this.currentState[1][0] === 0) {
+    this.stateChange('four', 1, 0)
+    this.count++
+  }
 })
 
 // CLICK FOR BOX five
@@ -231,8 +244,10 @@ const five = document.querySelector('.five')
 
 five.addEventListener('click', event=> {
   console.log('click three worked')
-  this.stateChange('five', 1, 1)
-  this.count++
+  if (this.currentState[1][1] === 0) {
+    this.stateChange('five', 1, 1)
+    this.count++
+  }
 })
 
 // CLICK FOR BOX SIX
@@ -240,8 +255,10 @@ const six = document.querySelector('.six')
 
 six.addEventListener('click', event=> {
   console.log('click three worked')
-  this.stateChange('six' , 1, 2)
-  this.count++
+  if (this.currentState[1][2] === 0) {
+    this.stateChange('six' , 1, 2)
+    this.count++
+  }
 })
 
 // CLICK FOR BOX SEVEN
@@ -249,8 +266,10 @@ const seven = document.querySelector('.seven')
 
 seven.addEventListener('click', event=> {
   console.log('click three worked')
-  this.stateChange('seven' , 2, 0)
-  this.count++
+  if (this.currentState[2][0] === 0) {
+    this.stateChange('seven' , 2, 0)
+    this.count++
+  }
 })
 
 // CLICK FOR BOX EIGHT
@@ -258,8 +277,10 @@ const eight = document.querySelector('.eight')
 
 eight.addEventListener('click', event=> {
   console.log('click three worked')
-  this.stateChange('eight', 2, 1)
-  this.count++
+  if (this.currentState[2][1] === 0) {
+    this.stateChange('eight', 2, 1)
+    this.count++
+  }
 })
 
 // CLICK FOR BOX NINE
@@ -267,8 +288,10 @@ const nine = document.querySelector('.nine')
 
 nine.addEventListener('click', event=> {
   console.log('click three worked')
-  this.stateChange('nine', 2, 2)
-  this.count++
+  if (this.currentState[2][2] === 0) {
+    this.stateChange('nine', 2, 2)
+    this.count++
+  }
 })
 
 
