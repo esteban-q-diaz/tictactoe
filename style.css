@@ -1,5 +1,4 @@
 body {
-  /* background-color: #fff; */
   align-content: center;
   font-family: monospace;
   text-align: center;
@@ -32,23 +31,6 @@ text-align: center;
   text-align: left;
   align-items: center;
 }
-/* .table .td {
-max-width:30px;
-  overflow:hidden;
-  text-overflow:ellipsis;
-  white-space: nowrap;
-
-} */
-
-/* .one, .two, .four, .five,  .seven, .eight {
-border-right: solid;
-color:
-}
-
-.four, .five, .six, .seven, .eight, .nine {
-border-top: solid;
-color:
-} */
 
 .one, .two, .three, .four, .five, .six, .seven, .eight, .nine {
 padding: 50px
