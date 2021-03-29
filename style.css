@@ -28,12 +28,11 @@ text-align: center;
 }
 
 .one {
-  text-align: left;
   align-items: center;
 }
 
 .one, .two, .three, .four, .five, .six, .seven, .eight, .nine {
-padding: 50px
+padding: 0px
 }
 
 .resetBtn {
@@ -72,7 +71,9 @@ opacity: 0.9;
 th:after {
 content: "\00A0";
 }
-
+th:before {
+content: "\00A0";
+}
 .flex {
 display: flex;
 flex-direction: column;
